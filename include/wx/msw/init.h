@@ -25,6 +25,10 @@
 // WinMain() is always ANSI, even in Unicode build.
 typedef char *wxCmdLineArgType;
 
+// Call this function to prevent wxMSW from calling SetProcessDPIAware().
+// Must be called before wxEntry().
+extern WXDLLIMPEXP_CORE void wxMSWDisableSettingHighDPIAware();
+
 // Windows-only overloads of wxEntry() and wxEntryStart() which take the
 // parameters passed to WinMain() instead of those passed to main()
 extern WXDLLIMPEXP_CORE bool
